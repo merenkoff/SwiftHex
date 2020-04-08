@@ -35,9 +35,9 @@ private func trimString(theString: String) -> String? {
     do {
         
         let regex = try NSRegularExpression(pattern: "^[0-9a-f]*$", options: .caseInsensitive)
-        let found = regex.firstMatch(in: trimmedString, options: [], range: NSMakeRange(0, trimmedString.characters.count))
+        let found = regex.firstMatch(in: trimmedString, options: [], range: NSMakeRange(0, trimmedString.count))
             
-        if found == nil || found?.range.location == NSNotFound || trimmedString.characters.count % 2 != 0 {
+        if found == nil || found?.range.location == NSNotFound || trimmedString.count % 2 != 0 {
             return nil
         }
         
