@@ -41,4 +41,8 @@ class SwiftHexTests: XCTestCase {
         testEncoder("047f0000011104d2047f0000010610e1",[4,127,0,0,1,17,4,210,4,127,0,0,1,6,16,225])
         
     }
+    static var allTests = [
+        ("testHexDecode", testHexDecode),
+        ("testHexEncode", testHexEncode),
+    ]
 }

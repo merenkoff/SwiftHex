@@ -28,8 +28,8 @@ public func encodeToString(hexBytes: [UInt8]) -> String {
 
 private func trimString(theString: String) -> String? {
     
-	let trimmedString = theString.trimmingCharacters(in: CharacterSet(charactersIn: "<> ")).replacingOccurrences(of: " ", with: "")
-	
+    let trimmedString = theString.trimmingCharacters(in: CharacterSet(charactersIn: "<> ")).replacingOccurrences(of: " ", with: "")
+    
     // Clean up string to remove non-hex digits.
     // Ensure there is an even number of digits.
     do {
